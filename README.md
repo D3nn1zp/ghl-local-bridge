@@ -14,6 +14,8 @@ GHL Local Bridge leest geselecteerde meetwaarden rechtstreeks uit de lokale GHL 
 - Ondersteuning voor `amd64` en `aarch64`
 - Nederlandstalige, Engelstalige en Duitstalige configuratieteksten
 
+  ![Voorbeeld GHL Local Bridge in Home Assistant](images/haos-voorbeeld.png)
+
 ## Installeren in Home Assistant
 
 Voeg deze repository toe aan de Home Assistant App Store:
