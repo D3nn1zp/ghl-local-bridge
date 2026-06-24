@@ -1,0 +1,53 @@
+configuration:
+  ghl_url:
+    name: Lokaal GHL-adres
+    description: Het lokale HTTP- of HTTPS-adres van de ProfiLux.
+  ghl_pin:
+    name: GHL-PIN
+    description: PIN voor het GHL-apparaat. De instelbrowser wordt beveiligd door Home Assistant Ingress.
+  interval_minutes:
+    name: Uitleesinterval
+    description: Aantal minuten tussen updates.
+  language:
+    name: Browsertaal
+    description: Compatibiliteitsinstelling; de taal wordt tijdens de eerste GHL-wizard gekozen.
+  device_name:
+    name: Apparaatnaam
+    description: Naam van het MQTT-apparaat in Home Assistant.
+  mqtt_topic_prefix:
+    name: MQTT-topicprefix
+    description: Prefix voor MQTT-status, beschikbaarheid en discovery.
+  sensors:
+    name: Sensoren selecteren
+    description: Alleen aangevinkte waarden worden gezocht en als MQTT-sensor in Home Assistant aangemaakt.
+    fields:
+      kh:
+        name: KH
+        description: Leest de actuele KH-waarde uit de kaart KH Director.
+      temperature:
+        name: Temperatuur
+        description: Leest Temperatuur 1 uit de kaart Sensoren.
+      density:
+        name: Dichtheid zee
+        description: Leest de zeewaterdichtheid in kg/L uit de kaart Sensoren.
+      calcium:
+        name: Calcium
+        description: Leest calcium uit de kaart ION Director.
+      magnesium:
+        name: Magnesium
+        description: Leest magnesium uit de kaart ION Director.
+      potassium:
+        name: Kalium
+        description: Leest kalium uit de kaart ION Director.
+      sodium:
+        name: Natrium
+        description: Leest natrium uit de kaart ION Director.
+      nitrate:
+        name: Nitraat
+        description: Leest nitraat uit de kaart ION Director.
+  setup_ui:
+    name: Instelbrowser inschakelen
+    description: Schakelt de noVNC-Web UI via Home Assistant Ingress in.
+  debug:
+    name: Debuglogboek
+    description: Bewaart extra diagnosebestanden bij fouten.

@@ -1,0 +1,53 @@
+configuration:
+  ghl_url:
+    name: Local GHL address
+    description: Local HTTP or HTTPS address of the ProfiLux.
+  ghl_pin:
+    name: GHL PIN
+    description: PIN for the GHL device. The setup browser is protected by Home Assistant Ingress.
+  interval_minutes:
+    name: Poll interval
+    description: Minutes between updates.
+  language:
+    name: Browser language
+    description: Compatibility option; choose the language in the first GHL wizard.
+  device_name:
+    name: Device name
+    description: MQTT device name in Home Assistant.
+  mqtt_topic_prefix:
+    name: MQTT topic prefix
+    description: Prefix used for state, availability and discovery.
+  sensors:
+    name: Select sensors
+    description: Only enabled values are searched for and created as MQTT sensors in Home Assistant.
+    fields:
+      kh:
+        name: KH
+        description: Reads the current KH value from the KH Director card.
+      temperature:
+        name: Temperature
+        description: Reads Temperature 1 from the Sensors card.
+      density:
+        name: Seawater density
+        description: Reads seawater density in kg/L from the Sensors card.
+      calcium:
+        name: Calcium
+        description: Reads calcium from the ION Director card.
+      magnesium:
+        name: Magnesium
+        description: Reads magnesium from the ION Director card.
+      potassium:
+        name: Potassium
+        description: Reads potassium from the ION Director card.
+      sodium:
+        name: Sodium
+        description: Reads sodium from the ION Director card.
+      nitrate:
+        name: Nitrate
+        description: Reads nitrate from the ION Director card.
+  setup_ui:
+    name: Enable setup browser
+    description: Enables the noVNC Web UI through Home Assistant Ingress.
+  debug:
+    name: Debug logging
+    description: Stores additional diagnostic files on errors.

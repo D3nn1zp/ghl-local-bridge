@@ -1,0 +1,56 @@
+name: GHL Local Bridge
+version: "1.0.0"
+slug: ghl_local_bridge
+description: Leest geselecteerde GHL-waarden lokaal uit via een blijvend browserprofiel en maakt MQTT-sensoren in Home Assistant.
+url: https://github.com/D3nn1zp/ghl-local-bridge
+startup: application
+boot: auto
+init: false
+stage: stable
+image: ghcr.io/d3nn1zp/ghl-local-bridge
+arch:
+  - amd64
+  - aarch64
+services:
+  - mqtt:need
+ingress: true
+ingress_port: 8099
+ingress_entry: "vnc.html?autoconnect=1&resize=scale&reconnect=1&path=websockify"
+ingress_stream: true
+panel_icon: mdi:monitor-eye
+panel_title: GHL Browser
+options:
+  ghl_url: http://192.168.1.100
+  interval_minutes: 15
+  language: nl-NL
+  device_name: GHL Aquarium
+  mqtt_topic_prefix: ghl/aquarium
+  sensors:
+    kh: true
+    temperature: true
+    density: true
+    calcium: true
+    magnesium: true
+    potassium: true
+    sodium: true
+    nitrate: true
+  setup_ui: true
+  debug: false
+schema:
+  ghl_url: str
+  ghl_pin: password
+  interval_minutes: int
+  language: "list(nl-NL|en-US|de-DE)"
+  device_name: str
+  mqtt_topic_prefix: str
+  sensors:
+    kh: bool
+    temperature: bool
+    density: bool
+    calcium: bool
+    magnesium: bool
+    potassium: bool
+    sodium: bool
+    nitrate: bool
+  setup_ui: bool
+  debug: bool
