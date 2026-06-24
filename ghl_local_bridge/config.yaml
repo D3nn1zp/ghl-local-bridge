@@ -7,7 +7,7 @@ startup: application
 boot: auto
 init: false
 stage: stable
-image: ghcr.io/d3nn1zp/ghl-local-bridge
+image: ghcr.io/d3nn1zp/{arch}-ghl-local-bridge
 arch:
   - amd64
   - aarch64
